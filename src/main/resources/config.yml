@@ -1,0 +1,28 @@
+# The main configuration file for the Core
+
+On-Join:
+  Send-To-Spawn: false
+  Title:
+    Enabled: true
+    Title: '&b&lWelcome to'
+    Subtitle: '&f&lMy Server'
+    Fade-In: 1
+    Stay: 3
+    Fade-Out: 1
+  Message:
+    Enabled: true
+    Message: '&8[&a+&8] &d%player% &7has &ajoined &7the server!'
+  Random-Firework: true
+
+On-Leave:
+  Message:
+    Enabled: true
+    Message: '&8[&c-&8] &d%player% &7has &cleft &7the server!'
+
+Auto-Announcer:
+  Enabled: true
+  # Interval is in seconds
+  Interval: 180
+  Messages:
+    - '&8[&cMythic&aCraft&8] &7Vote everyday for rewards such as crate keys, money, items, and more!'
+    - '&8[&cMythic&aCraft&8] &7Enjoying the server? Consider &bdonating &7at &dwww.mythiccraft.net'
