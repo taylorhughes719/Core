@@ -1,0 +1,17 @@
+name: Core
+version: ${project.version}
+main: net.mythiccraft.core.Core
+prefix: Core
+softdepend: [Vault, PlaceholderAPI, WorldGuard]
+authors: [taylorhughes719, Joshzen]
+author: taylorhughes719
+description: A custom core plugin for MthicCraft
+commands:
+  core:
+    description: The main command for Core.
+  fly:
+    description: Toggle flight for you or another player.
+  pay:
+    description: Pay another player.
+  balance:
+    description: Check your current balance.
