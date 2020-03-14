@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Objects;
 
 /**
- * @author Taylor Hughes
+ * A command class. All commands should extend this class.
  */
 public abstract class CCommand implements CommandExecutor {
     private Core plugin;
