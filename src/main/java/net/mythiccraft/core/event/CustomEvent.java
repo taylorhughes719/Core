@@ -5,7 +5,7 @@ import net.mythiccraft.core.Core;
 import org.bukkit.event.Event;
 
 /**
- * A custom event class.
+ * @author Taylor Hughes
  */
 public abstract class CustomEvent extends Event {
 

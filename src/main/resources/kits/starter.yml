@@ -1,0 +1,85 @@
+# Starter kit configuration file
+
+# Name for in the /kits list
+Name: Starter
+
+# Is there a set price for each time the kit is used?
+Price: 0
+
+# Delay in between uses (in seconds)
+Delay: 86400
+
+# The display item in /kits
+Display-Item:
+  Material: LEATHER_CHESTPLATE
+  Amount: 1
+  Name: '&fStarter Kit'
+  Lore:
+    - '&7Left-Click to preview'
+    - '&7Right-Click to use'
+
+# The items in the kit
+Items:
+
+  # The armor in the kit
+  Helmet:
+    Material: LEATHER_HELMET
+    Amount: 1
+    Enchants:
+      - DURABILITY 1
+    Name: '&3Starter Helmet'
+  Chestplate:
+    Material: LEATHER_CHESTPLATE
+    Amount: 1
+    Enchants:
+      - DURABILITY 1
+    Name: '&3Starter Chestplate'
+  Leggings:
+    Material: LEATHER_LEGGINGS
+    Amount: 1
+    Enchants:
+      - DURABILITY 1
+    Name: '&3Starter Leggings'
+  Boots:
+    Material: LEATHER_BOOTS
+    Amount: 1
+    Enchants:
+      - DURABILITY 1
+    Name: '&3Starter Boots'
+
+  # Items given in the inventory section (everything that is not armor)
+  Inventory:
+    # 1 = Slot number 0, 2 = slot number 1, etc.
+    1:
+      Material: LOG
+      Amount: 16
+    2:
+      Material: STEAK
+      Amount: 32
+    3:
+      Material: IRON_PICKAXE
+      Amount: 1
+      Name: '&3Starter Pickaxe'
+      Enchants:
+        - EFFICIENCY 1
+    4:
+      Material: IRON_AXE
+      Amount: 1
+      Name: '&3Starter Axe'
+      Enchants:
+        - EFFICIENCY 1
+    5:
+      Material: IRON_SHOVEL
+      Amount: 1
+      Name: '&3Starter Shovel'
+      Enchants:
+        - EFFICIENCY 1
+    6:
+      Material: IRON_SWORD
+      Amount: 1
+      Name: '&3Starter Sword'
+      Enchants:
+        - SHARPNESS 1
+    7:
+      Material: TORCH
+      Amount: 16
