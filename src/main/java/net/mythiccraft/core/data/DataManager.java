@@ -1,17 +1,16 @@
-package net.mythiccraft.core.util;
+package net.mythiccraft.core.data;
 
 import net.mythiccraft.core.Core;
 
 /**
- * A manager class.
- *
  * @author Taylor Hughes
  */
-public abstract class Manager {
+public class DataManager {
 
     private Core plugin;
+    private Storage storage;
 
-    public Manager(Core plugin) {
+    public DataManager(Core plugin) {
         this.plugin = plugin;
     }
 
@@ -19,5 +18,7 @@ public abstract class Manager {
         return plugin;
     }
 
-    public abstract void shutdown();
+    public Storage getStorage() {
+        return storage;
+    }
 }

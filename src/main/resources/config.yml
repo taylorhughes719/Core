@@ -1,5 +1,18 @@
 # The main configuration file for the Core
 
+# By default MySQL is set to false, and SQLite is used
+MySQL:
+  # I recommend using MySQL for better performance.
+  Enabled: false
+  # The database name
+  Database: my_database
+  # The port number (ignore if you are not using MySQL)
+  Port: 3306
+  # The username (ignore if you are not using MySQL)
+  Username: root
+  # The password (ignore if you are not using MySQL)
+  Password: 'root'
+
 On-Join:
   Send-To-Spawn: false
   Title:

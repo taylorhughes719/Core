@@ -1,8 +1,13 @@
 package net.mythiccraft.core.kit;
 
+import net.mythiccraft.core.Core;
+import net.mythiccraft.core.config.KitConfig;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -13,12 +18,23 @@ public class Kit {
     private String name;
     private long interval;
     private ItemStack helmet, chestplate, leggings, boots;
-    private Map<Integer, ItemStack> items;
+    private ItemStack[] contents;
+    private KitConfig config;
+    private boolean defaultKit;
 
-    public Kit(String name) {
+    public Kit(String name, boolean defaultKit) {
         this.name = name;
-        this.items = new HashMap<>();
         this.interval = 0L;
+        this.defaultKit = defaultKit;
+        this.config = new KitConfig(Core.getInstance(), name, defaultKit);
+    }
+
+    public boolean isDefaultKit() {
+        return defaultKit;
+    }
+
+    public KitConfig getConfig() {
+        return config;
     }
 
     public String getName() {
@@ -37,8 +53,16 @@ public class Kit {
         return interval;
     }
 
-    public Map<Integer, ItemStack> getItems() {
-        return items;
+    public ItemStack[] getContents() {
+        return contents;
+    }
+
+    public void setContents(ItemStack[] contents) {
+        this.contents = contents;
+    }
+
+    public void setContents(List<ItemStack> contents) {
+        this.contents = (ItemStack[]) contents.toArray();
     }
 
     public ItemStack getBoots() {
@@ -75,5 +99,33 @@ public class Kit {
 
     public void setInterval(long interval) {
         this.interval = interval;
+    }
+
+    public void give(Player player) {
+        if (player.getInventory().getHelmet() == null || player.getInventory().getHelmet().getType() == Material.AIR) {
+            player.getInventory().setHelmet(getHelmet());
+        } else {
+            player.getInventory().setItem(player.getInventory().firstEmpty(), getHelmet());
+        }
+
+        if (player.getInventory().getChestplate() == null || player.getInventory().getChestplate().getType() == Material.AIR) {
+            player.getInventory().setChestplate(getChestplate());
+        } else {
+            player.getInventory().setItem(player.getInventory().firstEmpty(), getChestplate());
+        }
+
+        if (player.getInventory().getLeggings() == null || player.getInventory().getLeggings().getType() == Material.AIR) {
+            player.getInventory().setLeggings(getLeggings());
+        } else {
+            player.getInventory().setItem(player.getInventory().firstEmpty(), getLeggings());
+        }
+
+        if (player.getInventory().getBoots() == null || player.getInventory().getBoots().getType() == Material.AIR) {
+            player.getInventory().setBoots(getBoots());
+        } else {
+            player.getInventory().setItem(player.getInventory().firstEmpty(), getBoots());
+        }
+
+
     }
 }

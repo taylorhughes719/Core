@@ -47,6 +47,10 @@ public class FileConfig {
         return this.file;
     }
 
+    public Core getPlugin() {
+        return plugin;
+    }
+
     @SuppressWarnings("UnstableApiUsage")
     public void load() {
         this.plugin.getLogger().info("Loading file configuration: " + this.file.getName());
