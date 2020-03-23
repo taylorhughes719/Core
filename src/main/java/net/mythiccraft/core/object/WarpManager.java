@@ -2,6 +2,7 @@ package net.mythiccraft.core.object;
 
 import net.mythiccraft.core.Core;
 import net.mythiccraft.core.util.Manager;
+import org.bukkit.entity.Player;
 
 import java.util.Map;
 
@@ -32,5 +33,14 @@ public class WarpManager extends Manager {
 
     public boolean isWarp(String name) {
         return warps.containsKey(name) || warps.get(name) != null;
+    }
+
+    public boolean tp(Player who, String warpName) {
+        if (isWarp(warpName)) {
+            who.teleport(getWarp(warpName).getLocation());
+            return true;
+        } else {
+            return false;
+        }
     }
 }

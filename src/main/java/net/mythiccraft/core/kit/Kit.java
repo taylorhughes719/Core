@@ -38,7 +38,7 @@ public class Kit {
     }
 
     public String getName() {
-        return name;
+        return config.getString("Name");
     }
 
     public void setName(String name) {
@@ -50,7 +50,7 @@ public class Kit {
     }
 
     public long getInterval() {
-        return interval;
+        return config.getLong("Interval");
     }
 
     public ItemStack[] getContents() {
@@ -66,7 +66,7 @@ public class Kit {
     }
 
     public ItemStack getBoots() {
-        return boots;
+        return config.getBoots();
     }
 
     public void setBoots(ItemStack boots) {
@@ -74,7 +74,7 @@ public class Kit {
     }
 
     public ItemStack getChestplate() {
-        return chestplate;
+        return config.getChestplate();
     }
 
     public void setChestplate(ItemStack chestplate) {
@@ -82,7 +82,7 @@ public class Kit {
     }
 
     public ItemStack getLeggings() {
-        return leggings;
+        return config.getLeggings();
     }
 
     public void setLeggings(ItemStack leggings) {
@@ -90,7 +90,7 @@ public class Kit {
     }
 
     public ItemStack getHelmet() {
-        return helmet;
+        return config.getHelmet();
     }
 
     public void setHelmet(ItemStack helmet) {

@@ -2,6 +2,7 @@ package net.mythiccraft.core;
 
 import net.mythiccraft.core.config.FileConfig;
 
+import net.mythiccraft.core.config.WarpsConfig;
 import net.mythiccraft.core.util.Text;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -22,6 +23,7 @@ public final class Core extends JavaPlugin {
     private FileConfig messagesConfig;
     private FileConfig kitsConfig;
     private FileConfig dataConfig;
+    private WarpsConfig warpsConfig;
 
     @Override
     public void onEnable() {
@@ -39,6 +41,7 @@ public final class Core extends JavaPlugin {
         this.messagesConfig = new FileConfig(this, "messages.yml");
         this.kitsConfig = new FileConfig(this, "kits.yml");
         this.dataConfig = new FileConfig(this, "data.yml");
+        this.warpsConfig = new WarpsConfig(this);
     }
 
     @Override
@@ -50,6 +53,7 @@ public final class Core extends JavaPlugin {
         this.kitsConfig = null;
         this.messagesConfig = null;
         this.mainConfig = null;
+        this.warpsConfig = null;
 
         HandlerList.unregisterAll(instance);
 
@@ -96,6 +100,10 @@ public final class Core extends JavaPlugin {
 
     public FileConfig getMainConfig() {
         return mainConfig;
+    }
+
+    public WarpsConfig getWarpsConfig() {
+        return warpsConfig;
     }
 
     @Override

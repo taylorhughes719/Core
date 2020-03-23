@@ -1,7 +1,7 @@
 # Starter kit configuration file
 
 # Name for in the /kits list
-Name: Starter
+Name: Member
 
 # Is there a set price for each time the kit is used?
 Price: 0
@@ -11,9 +11,9 @@ Delay: 86400
 
 # The display item in /kits
 Display-Item:
-  Material: LEATHER_CHESTPLATE
+  Material: CHAINMAIL_CHESTPLATE
   Amount: 1
-  Name: '&fStarter Kit'
+  Name: '&3Member Kit'
   Lore:
     - '&7Left-Click to preview'
     - '&7Right-Click to use'
@@ -23,63 +23,67 @@ Items:
 
   # The armor in the kit
   Helmet:
-    Material: LEATHER_HELMET
+    Material: CHAINMAIL_HELMET
     Amount: 1
     Enchants:
       - DURABILITY 1
-    Name: '&3Starter Helmet'
+    Name: '&8>> &bMember Helmet &8<<'
   Chestplate:
-    Material: LEATHER_CHESTPLATE
+    Material: CHAINMAIL_CHESTPLATE
     Amount: 1
     Enchants:
       - DURABILITY 1
-    Name: '&3Starter Chestplate'
+    Name: '&8>> &bMember Chestplate &8<<'
   Leggings:
-    Material: LEATHER_LEGGINGS
+    Material: CHAINMAIL_LEGGINGS
     Amount: 1
     Enchants:
       - DURABILITY 1
-    Name: '&3Starter Leggings'
+    Name: '&8>> &bMember Leggings &8<<'
   Boots:
-    Material: LEATHER_BOOTS
+    Material: CHAINMAIL_BOOTS
     Amount: 1
     Enchants:
       - DURABILITY 1
-    Name: '&3Starter Boots'
+    Name: '&8>> &bMember Boots &8<<'
 
   # Items given in the inventory section (everything that is not armor)
   Inventory:
     # 1 = Slot number 0, 2 = slot number 1, etc.
     1:
       Material: LOG
-      Amount: 8
+      Amount: 16
     2:
       Material: STEAK
-      Amount: 8
+      Amount: 16
     3:
       Material: IRON_PICKAXE
       Amount: 1
-      Name: '&3Starter Pickaxe'
+      Name: '&bMember Pickaxe'
       Enchants:
-        - EFFICIENCY 1
+        - EFFICIENCY 2
     4:
       Material: IRON_AXE
       Amount: 1
-      Name: '&3Starter Axe'
+      Name: '&bMember Axe'
       Enchants:
-        - EFFICIENCY 1
+        - EFFICIENCY 2
     5:
       Material: IRON_SHOVEL
       Amount: 1
-      Name: '&3Starter Shovel'
+      Name: '&bMember Shovel'
       Enchants:
-        - EFFICIENCY 1
+        - EFFICIENCY 2
     6:
       Material: IRON_SWORD
       Amount: 1
-      Name: '&3Starter Sword'
+      Name: '&bMember Sword'
       Enchants:
-        - SHARPNESS 1
+        - SHARPNESS 2
     7:
       Material: TORCH
-      Amount: 16
+      Amount: 24
+    8:
+      Material: GOLDEN_APPLE
+      Amount: 1
+

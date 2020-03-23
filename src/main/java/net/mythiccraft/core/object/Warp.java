@@ -15,7 +15,6 @@ public class Warp {
         this.location = location;
     }
 
-
     public String getName() {
         return name;
     }

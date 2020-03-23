@@ -1,19 +1,20 @@
 # Starter kit configuration file
 
 # Name for in the /kits list
-Name: Starter
+Name: Veteran
 
 # Is there a set price for each time the kit is used?
 Price: 0
 
 # Delay in between uses (in seconds)
+# Use -1 for one-time kits
 Delay: 86400
 
 # The display item in /kits
 Display-Item:
-  Material: LEATHER_CHESTPLATE
+  Material: CHAINMAIL_CHESTPLATE
   Amount: 1
-  Name: '&fStarter Kit'
+  Name: '&dVeteran Kit'
   Lore:
     - '&7Left-Click to preview'
     - '&7Right-Click to use'
@@ -23,63 +24,79 @@ Items:
 
   # The armor in the kit
   Helmet:
-    Material: LEATHER_HELMET
+    Material: IRON_HELMET
     Amount: 1
     Enchants:
       - DURABILITY 1
-    Name: '&3Starter Helmet'
+    Name: '&8>> &dVeteran Helmet &8<<'
   Chestplate:
-    Material: LEATHER_CHESTPLATE
+    Material: IRON_CHESTPLATE
     Amount: 1
     Enchants:
       - DURABILITY 1
-    Name: '&3Starter Chestplate'
+    Name: '&8>> &dVeteran Chestplate &8<<'
   Leggings:
-    Material: LEATHER_LEGGINGS
+    Material: IRON_LEGGINGS
     Amount: 1
     Enchants:
       - DURABILITY 1
-    Name: '&3Starter Leggings'
+    Name: '&8>> &dVeteran Leggings &8<<'
   Boots:
-    Material: LEATHER_BOOTS
+    Material: IRON_BOOTS
     Amount: 1
     Enchants:
       - DURABILITY 1
-    Name: '&3Starter Boots'
+    Name: '&8>> &dVeteran Boots &8<<'
 
   # Items given in the inventory section (everything that is not armor)
   Inventory:
     # 1 = Slot number 0, 2 = slot number 1, etc.
     1:
       Material: LOG
-      Amount: 8
+      Amount: 24
     2:
       Material: STEAK
-      Amount: 8
+      Amount: 32
     3:
       Material: IRON_PICKAXE
       Amount: 1
-      Name: '&3Starter Pickaxe'
+      Name: '&8>> &dVeteran Pickaxe &8<<'
       Enchants:
-        - EFFICIENCY 1
+        - EFFICIENCY 3
+        - DURABILITY 1
     4:
       Material: IRON_AXE
       Amount: 1
-      Name: '&3Starter Axe'
+      Name: '&8>> &dVeteran Axe &8<<'
       Enchants:
-        - EFFICIENCY 1
+        - EFFICIENCY 3
+        - DURABILITY 1
     5:
       Material: IRON_SHOVEL
       Amount: 1
-      Name: '&3Starter Shovel'
+      Name: '&8>> &dVeteran Shovel &8<<'
       Enchants:
-        - EFFICIENCY 1
+        - EFFICIENCY 3
+        - DURABILITY 1
     6:
       Material: IRON_SWORD
       Amount: 1
-      Name: '&3Starter Sword'
+      Name: '&8>> &dVeteran Sword &8<<'
       Enchants:
-        - SHARPNESS 1
+        - SHARPNESS 3
+        - DURABILITY 1
     7:
+      Material: IRON_HOE
+      Amount: 1
+      Name: '&8>> &dVeteran Hoe &8<<'
+      Enchants:
+        - DURABILITY 1
+    8:
       Material: TORCH
-      Amount: 16
+      Amount: 32
+    9:
+      Material: APPLE
+      Amount: 8
+    10:
+      Material: GOLDEN_APPLE
+      Amount: 2
